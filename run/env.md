@@ -31,3 +31,4 @@ curl http://127.0.0.1:8888/v1/chain/get_info
 ## Reference
 - https://docs.docker.com/install/linux/docker-ce/ubuntu/#upgrade-docker-after-using-the-convenience-script
 - https://github.com/EOSIO/eos/wiki/Local-Environment#3-docker
+- [Docker build error: CMake Error at plugins/mongo_db_plugin/CMakeLists.txt:22](https://github.com/EOSIO/eos/issues/2352)
