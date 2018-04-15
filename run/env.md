@@ -12,7 +12,9 @@ sudo sh get-docker.sh
 ## Build EOSIO image
 ```
 git clone https://github.com/EOSIO/eos.git --recursive
-cd eos/Docker
+cd eos/Docker/builder
+sudo docker build -t eosio/builder .
+cd ..
 sudo docker build . -t eosio/eos
 ```
 
