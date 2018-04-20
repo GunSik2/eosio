@@ -27,3 +27,7 @@ PasswordAuthentication yes
 ```
 sudo service ssh restart 
 ```
+- Access ssh server with terminal
+```
+ssh username@localhost -p 2200
+```
