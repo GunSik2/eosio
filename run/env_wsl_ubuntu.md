@@ -36,6 +36,11 @@ ssh username@localhost -p 2200
 ```
 git clone https://github.com/EOSIO/eos --recursive
 ```
+- Get dawn-v3.0
+```
+git checkout dawn-v3.0.0
+git submodule update --recursive
+```
 - Building EOSIO
 ```
 cd eos
