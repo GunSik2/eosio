@@ -54,7 +54,10 @@ sudo make install
 - Creating and Launching a Single Node Testnet
 ```
 cd build/programs/nodeos/
-./nodeos -e -p eosio --plugin eosio::wallet_api_plugin --plugin eosio::chain_api_plugin --plugin eosio::account_history_api_plugin
+./nodeos -e -p eosio \
+    --plugin eosio::wallet_api_plugin \
+    --plugin eosio::chain_api_plugin \
+    --plugin eosio::account_history_api_plugin
 ```
 - Starting logs
 ```
