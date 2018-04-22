@@ -1,4 +1,4 @@
-# Using WSL(Windows Subsystem for Linux)
+# WSL(Windows Subsystem for Linux) 
 
 ## Install the Windows Subsystem for Linux
 - Open PowerShell as Administrator and run:
@@ -30,6 +30,27 @@ sudo service ssh restart
 ```
 ssh username@localhost -p 2200
 ```
+## (Optional) Reinstall ubuntu
+- Open Windows command prompt and run:
+```
+lxrun /uninstall /full to uninstall
+lxrun /install to reinstall
+```
+- Run bash to launch a new Ubuntu shell and inside it run update & upgrade:
+```
+sudo apt update
+sudo apt full-upgrade
+```
+
+## VS Code
+- Download & install: https://code.visualstudio.com/Download
+- Enable Ubuntu bash console inside Visual Studio Code: File > Preferences > User Settings:
+```
+{
+  "terminal.integrated.shell.windows":  "C:\\Windows\\sysnative\\bash.exe"
+}
+```
+- Open ubuntu console: Ctrl + ' or View > Integrated Terminal
 
 ## EOS Local Env on Ubuntu
 - Getting the Code
@@ -131,3 +152,4 @@ eosio generated block 1dc4fc1f... #42 @ 2018-04-20T22:16:37.500 with 0 trxs, lib
 
 ## Reference
 - https://github.com/EOSIO/eos/wiki/Local-Environment
+- https://steemit.com/eos/@tokenika/installing-and-running-eos-on-windows
