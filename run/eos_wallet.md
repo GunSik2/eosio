@@ -114,7 +114,35 @@ $ cleos create account eosio myaccount \
 executed transaction: 5a99112b0108888f33c187350c7af25cb6ac908cd855ba359436f7dc58ef90cc  352 bytes  102400 cycles
 #         eosio <= eosio::newaccount            {"creator":"eosio","name":"myaccount","owner":{"threshold":1,"keys":[{"key":"EOS6m2t4D1UorWkunezVLNt...
 ```
+### Operating Account 
+```
+$ ./cleos get account  myaccount
+{
+  "account_name": "myaccount",
+  "permissions": [{
+      "perm_name": "active",
+      "parent": "owner",
+      "required_auth": {
+        "threshold": 1,
+        "keys": [{
+            "key": "EOS6m2t4D1UorWkunezVLNte5eaaDLvTtubfY2EPi1xgLfN95yaQU",
+            "weight": 1
+          }
+        ],
+        "accounts": []
+      }
+    },{
+...
+    }
+  ]
+}
 
+$ cleos get accounts  "5KJNAcrz3uK8bE4sfJ1wSrmsrdySzD7kM8H8m65Xnuyx6vcK6ey"
+
+$ cleos get transactions myaccount
+
+$ cleos transfer ...
+```
 
 ## Reference
 - https://github.com/EOSIO/eos/wiki/Tutorial-Comprehensive-Accounts-and-Wallets
