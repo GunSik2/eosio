@@ -48,24 +48,30 @@ executed transaction: 60a0522ae5b78fcc83e1feb5e12039770997ad8f56883b89c5f6b16b83
 - 구좌 생성
 ```
 $ cleos create key
-Private key: 5Jmsawgsp1tQ3GD6JyGCwy1dcvqKZgX6ugMVMdjirx85iv5VyPR
-Public key: EOS7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4
+Private key: 5HpMAapnBSSusqediNddgnTa4kSxxeoPiHHnWqmhQGgbp8ZzUbh
+Public key: EOS7nbHJCKH1ofvSjmb9Aw77ajjGAzsexuSJ8TGTVm9FgDDGyqm8v
 
-$ cleos wallet import 5Jmsawgsp1tQ3GD6JyGCwy1dcvqKZgX6ugMVMdjirx85iv5VyPR
-imported private key for: EOS7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4
+$ cleos wallet import 5HpMAapnBSSusqediNddgnTa4kSxxeoPiHHnWqmhQGgbp8ZzUbh
+imported private key for: EOS7nbHJCKH1ofvSjmb9Aw77ajjGAzsexuSJ8TGTVm9FgDDGyqm8v
 
 $ cleos wallet list
 $ cleos wallet keys
+..
+  [
+    "EOS7nbHJCKH1ofvSjmb9Aw77ajjGAzsexuSJ8TGTVm9FgDDGyqm8v",
+    "5HpMAapnBSSusqediNddgnTa4kSxxeoPiHHnWqmhQGgbp8ZzUbh"
+  ]
+..
 ```
 - 사용자 계정 생성
 ```
-$ cleos create account eosio user EOS7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4 EOS7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4
-executed transaction: 8aedb926cc1ca31642ada8daf4350833c95cbe98b869230f44da76d70f6d6242  364 bytes  1000 cycles
-#         eosio <= eosio::newaccount            {"creator":"eosio","name":"user","owner":{"threshold":1,"keys":[{"key":"EOS7ijWCBmoXBi3CgtK7DJxentZZ...
+$ cleos create account eosio user EOS7nbHJCKH1ofvSjmb9Aw77ajjGAzsexuSJ8TGTVm9FgDDGyqm8v EOS7nbHJCKH1ofvSjmb9Aw77ajjGAzsexuSJ8TGTVm9FgDDGyqm8v
+executed transaction: 2cb828cb8f95774f442ded5a6f51e4d5b89cc80e64daba3a7961a03c8b5fa68e  352 bytes  102400 cycles
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"user","owner":{"threshold":1,"keys":[{"key":"EOS7nbHJCKH1ofvSjmb9Aw77ajjG...
 
-$ cleos create account eosio tester EOS7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4 EOS7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4
-executed transaction: 414cf0dc7740d22474992779b2416b0eabdbc91522c16521307dd682051af083 366 bytes  1000 cycles
-#         eosio <= eosio::newaccount            {"creator":"eosio","name":"tester","owner":{"threshold":1,"keys":[{"key":"EOS7ijWCBmoXBi3CgtK7DJxentZZ...
+$ cleos create account eosio tester EOS7nbHJCKH1ofvSjmb9Aw77ajjGAzsexuSJ8TGTVm9FgDDGyqm8v EOS7nbHJCKH1ofvSjmb9Aw77ajjGAzsexuSJ8TGTVm9FgDDGyqm8v
+executed transaction: ddd4dbeae2e439f920dd5fbc76f64669334d21ff2844efbb19a0b77a66dd0089  352 bytes  102400 cycles
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"tester","owner":{"threshold":1,"keys":[{"key":"EOS7nbHJCKH1ofvSjmb9Aw77aj...
 ```
 
 ## eosio.token 계약
