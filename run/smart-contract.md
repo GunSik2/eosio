@@ -80,4 +80,5 @@ executed transaction: ddd4dbeae2e439f920dd5fbc76f64669334d21ff2844efbb19a0b77a66
 
 ## Reference
 - https://github.com/EOSIO/eos/wiki/Tutorial-Getting-Started-With-Contracts
+- https://github.com/EOSIO/eos/wiki/Tutorial-eosio-token-Contract
 - https://objectcomputing.com/resources/publications/sett/february-2018-eos-smart-contracts
