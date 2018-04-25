@@ -153,8 +153,60 @@ $ cleos create account eosio eosio.msig EOS7nbHJCKH1ofvSjmb9Aw77ajjGAzsexuSJ8TGT
 $ cleos set contract eosio.msig build/contracts/eosio.msig -p eosio.msig
 ```
 ## HelloWorld 계약 배포
+- hello/hello.cpp
+```
+#include <eosiolib/eosio.hpp>
+#include <eosiolib/print.hpp>
+using namespace eosio;
+
+class hello : public eosio::contract {
+  public:
+      using contract::contract;
+
+      /// @abi action 
+      void hi( account_name user ) {
+         print( "Hello, ", name{user} );
+      }
+};
+
+EOSIO_ABI( hello, (hi) )
+```
+- Compile
+```
+$ eosiocpp -o hello.wast hello.cpp
+```
+- Generate the abi
+```
+$ eosiocpp -g hello.abi hello.cpp
+```
+- account 생성 및 계약 배포
+```
+$ cleos create account eosio hello.code EOS7nbHJCKH1ofvSjmb9Aw77ajjGAzsexuSJ8TGTVm9FgDDGyqm8v EOS7nbHJCKH1ofvSjmb9Aw77ajjGAzsexuSJ8TGTVm9FgDDGyqm8v
+$ cleos set contract hello.code ../hello -p hello.code
+```
+- 계약 실행
+```
+$ cleos push action hello.code hi '["user"]' -p user
+$ cleos push action hello.code hi '["user"]' -p tester
+```
+- 사용자 인증 기능 추가 후 컴파일, 배포
+```
+void hi( account_name user ) {
+   require_auth( user );
+   print( "Hello, ", name{user} );
+}
+```
+- 계약 실행 : 유저와 권한이 다른 경우
+```
+$ cleos push action hello.code hi '["tester"]' -p user
+```
+- 계약 실행 : 유저와 권한이 같은 경우
+```
+$ cleos push action hello.code hi '["tester"]' -p tester
+```
 
 ## Reference
 - https://github.com/EOSIO/eos/wiki/Tutorial-Getting-Started-With-Contracts
 - https://github.com/EOSIO/eos/wiki/Tutorial-eosio-token-Contract
+- https://github.com/EOSIO/eos/wiki/Tutorial-Hello-World-Contract
 - https://objectcomputing.com/resources/publications/sett/february-2018-eos-smart-contracts
