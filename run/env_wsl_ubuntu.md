@@ -150,6 +150,18 @@ eosio generated block 1dc4fc1f... #42 @ 2018-04-20T22:16:37.500 with 0 trxs, lib
         `-- shared_memory.meta
 ```
 
+## Error resolved
+- nodeos starting error
+```
+./nodeos -e -p eosio \
+    --plugin eosio::wallet_api_plugin \
+    --plugin eosio::chain_api_plugin \
+    --plugin eosio::account_history_api_plugin
+3285366ms thread-0   main.cpp:95                   main                 ] 10 assert_exception: Assert Exception
+head_block_num() == 0: last block ID does not match current chain state
+==> 
+./nodeos --resync
+```
 ## Reference
 - https://github.com/EOSIO/eos/wiki/Local-Environment
 - https://steemit.com/eos/@tokenika/installing-and-running-eos-on-windows
