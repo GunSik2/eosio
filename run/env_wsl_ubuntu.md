@@ -11,15 +11,21 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 - Open the Microsoft Store and choose your favorite Linux distribution: ubuntu
 
 ## (Optional) Run OpenSSH Server
+- Run bash to launch a new Ubuntu shell and inside it run update & upgrade:
+```
+sudo apt update
+sudo apt full-upgrade
+```
+
 - Install Full OpenSSH Server
 ```
-sudo apt-get remove  openssh-server
-sudo apt-get install  openssh-server
+sudo apt-get remove -y openssh-server
+sudo apt-get install -y openssh-server
 ```
 - /etc/ssh/sshd_config
 ```
-Port 2200
-ListenAddress 0.0.0.0
+#Port 22
+#ListenAddress 0.0.0.0
 PasswordAuthentication yes
 ```
 - Restart
@@ -28,18 +34,13 @@ sudo service ssh restart
 ```
 - Access to ssh server with terminal: [mobaXterm](https://mobaxterm.mobatek.net)
 ```
-ssh username@localhost -p 2200
+ssh username@localhost 
 ```
 ## (Optional) Reinstall ubuntu
 - Open Windows command prompt and run:
 ```
 lxrun /uninstall /full to uninstall
 lxrun /install to reinstall
-```
-- Run bash to launch a new Ubuntu shell and inside it run update & upgrade:
-```
-sudo apt update
-sudo apt full-upgrade
 ```
 
 ## VS Code
