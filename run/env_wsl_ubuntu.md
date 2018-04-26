@@ -60,13 +60,21 @@ git clone https://github.com/EOSIO/eos --recursive
 ```
 - Get dawn-v3.0
 ```
+cd eos
 git checkout dawn-v3.0.0
 git submodule update --recursive
 ```
 - Building EOSIO
 ```
-cd eos
 ./eosio_build.sh
+```
+- (Optional) Error resolve
+```
+Error when building dawn 3.0 "unable to find the requested Boost libraries. eosio."
+
+I fixed the issue by editing eos/scripts/eosio_build_ubuntu.sh line 113.
+old: tar xf boost.1.66.0.tar.bz2
+new: tar xf boost_1_66_0.tar.bz2
 ```
 - (Optional) Install the executables
 ```
