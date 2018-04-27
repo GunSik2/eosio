@@ -1,5 +1,11 @@
-# WSL(Windows Subsystem for Linux) 
+# Local Dev. Env using WSL(Windows Subsystem for Linux) 
 
+## Introduction
+- Dev environment
+  - Windows 10
+  - WSL(Windows Subsystem for Linux) 
+  - vscode (Visual Studio Code)
+  
 ## Install the Windows Subsystem for Linux
 - Open PowerShell as Administrator and run:
 ```
