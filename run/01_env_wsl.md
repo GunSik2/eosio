@@ -1,10 +1,11 @@
-# Local Dev. Env using WSL(Windows Subsystem for Linux) 
+# Local Dev. Env using WSL
 
 ## Introduction
 - Dev environment
   - Windows 10
   - WSL(Windows Subsystem for Linux) 
   - vscode (Visual Studio Code)
+  - [ConEmu](https://conemu.github.io/)
   - firefox
   - term
   
@@ -62,11 +63,19 @@ lxrun /install to reinstall
 - Open ubuntu console: Ctrl + ' or View > Integrated Terminal
 
 ## Untility
+- Utility
 ```
-sudo apt -y install firefox nautilus gnome-terminal
+sudo apt -y install firefox nautilus Konsole terminator gnome-terminal
+```
+- Korean support
+```
+sudo apt -y install language-pack-ko
+sudo locale-gen ko_KR.UTF-8
+sudo apt -y install fonts-unfonts-core fonts-unfonts-extra fonts-baekmuk fonts-nanum fonts-nanum-coding fonts-nanum-extra
 ```
 
 ## Reference
 - https://github.com/EOSIO/eos/wiki/Local-Environment
 - https://steemit.com/eos/@tokenika/installing-and-running-eos-on-windows
+- https://blog.cloudboost.io/setting-up-windows-for-web-development-28483d245a82
 - https://medium.com/@rkttu/windows-10%EC%97%90%EC%84%9C-%EB%A6%AC%EB%88%85%EC%8A%A4%EC%9A%A9-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EC%84%A4%EC%B9%98%ED%95%98%EA%B3%A0-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0-2cb0d7892d12
