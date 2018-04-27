@@ -5,6 +5,8 @@
   - Windows 10
   - WSL(Windows Subsystem for Linux) 
   - vscode (Visual Studio Code)
+  - firefox
+  - term
   
 ## Install the Windows Subsystem for Linux
 - Open PowerShell as Administrator and run:
@@ -59,6 +61,12 @@ lxrun /install to reinstall
 ```
 - Open ubuntu console: Ctrl + ' or View > Integrated Terminal
 
+## Untility
+```
+sudo apt -y install firefox nautilus gnome-terminal
+```
+
 ## Reference
 - https://github.com/EOSIO/eos/wiki/Local-Environment
 - https://steemit.com/eos/@tokenika/installing-and-running-eos-on-windows
+- https://medium.com/@rkttu/windows-10%EC%97%90%EC%84%9C-%EB%A6%AC%EB%88%85%EC%8A%A4%EC%9A%A9-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EC%84%A4%EC%B9%98%ED%95%98%EA%B3%A0-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0-2cb0d7892d12
