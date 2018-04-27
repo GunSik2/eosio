@@ -74,6 +74,21 @@ sudo locale-gen ko_KR.UTF-8
 sudo apt -y install fonts-unfonts-core fonts-unfonts-extra fonts-baekmuk fonts-nanum fonts-nanum-coding fonts-nanum-extra
 ```
 
+## Tip
+- Ubuntu mirror setting for korea : change-ubuntu-mirror.sh
+```
+#!/bin/sh
+
+SL=/etc/apt/sources.list
+
+cp ${SL} ${SL}.org
+
+## 
+sed -e 's/\(us.\)\?archive.ubuntu.com/ftp.daumkakao.com/g' -e 's/security.ubuntu.com/ftp.daumkakao.com/g' < ${SL}.org > ${SL}
+
+## check
+apt update
+```
 ## Reference
 - https://github.com/EOSIO/eos/wiki/Local-Environment
 - https://steemit.com/eos/@tokenika/installing-and-running-eos-on-windows
