@@ -1,7 +1,7 @@
 # CLion + WSL
 
 ## Prerequistes
-- (CLione for Linux](https://www.jetbrains.com/clion/download/download-thanks.html?platform=linux)
+- [CLione for Linux](https://www.jetbrains.com/clion/download/download-thanks.html?platform=linux)
 - WSL & Ubuntu
 
 ## Install on WSL Ubuntu
