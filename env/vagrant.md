@@ -14,6 +14,7 @@ export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 
 export VAGRANT_WSL_WINDOWS_ACCESS_USER_HOME_PATH="/mnt/c/Vagrant/"
 ```
+
 ## Run vagrant ubuntu
 ```
 mkdir ubuntu-16.04; cd ubuntu-16.04;
@@ -22,6 +23,7 @@ cat Vagrantfile
 ---
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/xenial64"
+  config.vm.network "public_network"
   config.vm.provider "virtualbox" do |v|
     v.memory = 4096
     v.cpus = 4
@@ -29,7 +31,9 @@ Vagrant.configure("2") do |config|
   end
 end
 
-
+# run
+vagrant up --provider virtualbox
+ 
 # ssh
 vagrant ssh
 ```
